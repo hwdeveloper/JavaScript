@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02对象创建</title>
+    <script>
+    //1,对象字面量
+    var person1 = {
+        name: "bai",
+        age : 29,
+        job: "Software Engineer",
+        sayName: function(){
+            alert(this.name);
+        }
+    };
+
+    //2,工厂模式
+    function createPerson(name,age,job){
+        var o = new Object();
+        o.name = name;
+        o.age = age;
+        o.job = job;
+        o.sayname = function(){-
+            alert(this.name);
+        }
+        return o;
+    }
+    var person1 = createPerson('bai',29,'software Engineer');
+    var person2 = createPerson('hu',25,'software Engineer');
+
+    //3,构造函数模式
+    function Person(name,age,job){
+        this.name = name;
+        this.age = age;
+        this.jog = job;
+        this.sayName = function(){
+            alert(this.name);
+        };
+    }
+    var person1 = new Person("bai",29,"software Engineer");
+    var person2 = new Person("hu",25,"software Engineer");
+    //具有相同作用的sayName()方法在person1和person2这两个实例中却占用了不同的内存空间
+    console.log(person1.sayName === person2.sayName);//false
+
+    //4,构造函数拓展模式
+    function Person(name,age,job){
+        this.name = name;
+        this.age = age;
+        this.jog = job;
+        this.sayName = sayName;
+    }
+    function sayName(){
+        alert(this.name);
+    };
+    var person1 = new Person("bai",29,"software Engineer");
+    var person2 = new Person("hu",25,"software Engineer");
+    console.log(person1.sayName === person2.sayName);//true
+    </script>
+<body>
+
+</body>
+</html>

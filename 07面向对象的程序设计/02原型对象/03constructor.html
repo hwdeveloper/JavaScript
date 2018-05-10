@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03constructor</title>
+    <script>
+        function Person () {
+
+        }
+        //直接给Person的原型指定对象字面量。则这个对象的constructor属性不再指向Person函数
+        Person.prototype = {
+            name:"志玲",
+            age:20
+        };
+        var p1 = new Person();
+        alert(p1.name);  // 志玲
+
+        alert(p1 instanceof Person); // true
+        alert(Person.prototype.constructor === Person); //false
+        //如果constructor对你很重要，你应该在Person.prototype中添加一行这样的代码：
+        /*
+        Person.prototype = {
+            constructor : Person    //让constructor重新指向Person函数
+        }
+        */
+
+    </script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01函数定义</title>
+    <script>
+
+     //1,函数调用模式
+     function add(x,y){
+         return x+y;
+     }
+     var sum = add(3,4);
+     console.log(sum)//7
+
+     //2,方法调用模式
+     var o = {
+         m: function(){
+             console.log(1);
+         }
+     };
+     o.m();
+
+     //3,构造函数调用模式
+     function fn(){
+         this.a = 1;
+     };
+     var obj = new fn();
+     console.log(obj.a);
+
+     //4,间接调用模式
+     var obj = {};
+     function sum(x,y){
+         return x+y;
+     }
+     console.log(sum.call(obj,1,2));//3
+     console.log(sum.apply(obj,[1,2]));//3
+
+    </script>
+<body>
+
+</body>
+</html>

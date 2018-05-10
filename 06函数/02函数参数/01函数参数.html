@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02函数参数</title>
+    <script>
+    //1,同名形参
+    function add(x,x,x){
+        return x;
+    }
+    console.log(add(1,2,3));//3
+
+    //2,参数个数
+    function add(x,y){
+        console.log(x,y);//1 undefined
+    }
+    add(1);
+
+
+    //3,arguments 对象
+    function howManyArgs() {
+        alert(arguments.length);
+        alert(arguments[0],arguments[1]);
+    }
+
+    howManyArgs("string", 45);
+    </script>
+<body>
+
+</body>
+</html>
