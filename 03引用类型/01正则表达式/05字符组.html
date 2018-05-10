@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05字符组</title>
+    <script>
+        //匹配0-9这10个数字之一
+        var p = /[0123456789]/;
+        p.test('1');//true
+        p.test('a');//false
+
+        //匹配第一个是数字字符，第二个不是数字字符的字符串
+        console.log(/[0-9][^0-9]/.test('1e'));//true
+        console.log(/[0-9][^0-9]/.test('q2'));//false
+    </script>
+<body>
+
+</body>
+</html>

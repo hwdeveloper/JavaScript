@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03已有数组创建新数组</title>
+    <script>
+
+        //1,合并多个数组 创建一个新数组
+        var cisDept = ["Mike", "Clayton", "Terrill", "Danny", "Jennifer"];
+        var dmpDept = ["Raymond", "Cynthia", "Bryan"];
+        var itDiv = cis.concat(dmp);
+        print(itDiv);
+        itDiv = dmp.concat(cisDept);
+        print(itDiv);
+
+        //2,截取一个数组的子集创建一个新数组
+        var itDiv = ["Mike","Clayton","Terrill","Raymond","Cynthia","Danny","Jennifer"];
+        var dmpDept = itDiv.splice(3,3);
+        var cisDept = itDiv;
+        print(dmpDept); // Raymond,Cynthia,Danny
+        print(cisDept); // Mike,Clayton,Terrill,Jennifer
+
+    </script>
+<body>
+
+</body>
+</html>

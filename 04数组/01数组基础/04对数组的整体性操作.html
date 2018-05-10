@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04对数组的整体性操作</title>
+    <script>
+        //1,浅复制
+        var nums = [];
+        for (var i = 0; i < 100; ++i) {
+            nums[i] = i + 1;
+        }
+        var samenums = nums;
+        nums[0] = 400;
+        print(samenums[0]); // 显示 400
+
+        //2,深复制
+        var nums = [];
+        for (var i = 0; i < 100; ++i) {
+            nums[i] = i+1;
+        }
+
+        var samenums = [];
+        copy(nums, samenums);
+        nums[0] = 400;
+        print(samenums[0]); // 显示 1
+
+    </script>
+<body>
+
+</body>
+</html>

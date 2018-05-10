@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05break和continue语句</title>
+    <script>
+        var iNum = 0;
+
+        for (var i=1; i<10; i++) {
+            if (i % 5 == 0) {
+                break;
+            }
+            iNum++;
+        }
+        alert(iNum);	//输出 "4"
+
+        var iNum = 0;
+
+        for (var i=1; i<10; i++) {
+            if (i % 5 == 0) {
+                continue;
+            }
+            iNum++;
+        }
+        alert(iNum);	//输出 "8"
+    </script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07括号</title>
+    <script>
+        alert(/(ab){2}/.test('abab'));//true
+        alert(/(ab){2}/.test('abb'));//false
+        alert(/ab{2}/.test('abab'));//false
+        alert(/ab{2}/.test('abb'));//true
+    </script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01正则表达式</title>
+    <script>
+        //匹配字符串所有'at'的实例
+        var p = /at/g;
+        //test()方法返回一个布尔值表示是否可以找到匹配项
+        alert(p.test('ata'));//true
+        alert(p.test('aba'));//false
+
+        //匹配字符串所有'at'的实例
+        var p1 = /at/g;
+        //同上
+        var p2 = new RegExp('at','g');
+
+    </script>
+<body>
+
+</body>
+</html>

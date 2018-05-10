@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01函数定义</title>
+    <script>
+
+        //1,函数声明语句
+        function getInformation(name,age){
+            var newName = "超级"+name;
+        }
+
+        //2,函数的表达式
+        var getName=function (name) {
+            return "超级"+name;
+        }
+
+
+        //3,arguments 对象
+        function howManyArgs() {
+            alert(arguments.length);
+            alert(arguments[0],arguments[1]);
+        }
+
+        howManyArgs("string", 45);
+
+
+        //4,模拟函数重载
+        function doAdd() {
+            if(arguments.length == 1) {
+                alert(arguments[0] + 5);
+            } else if(arguments.length == 2) {
+                alert(arguments[0] + arguments[1]);
+            }
+        }
+
+        doAdd(10);	//输出 "15"
+        doAdd(40, 20);	//输出 "60"
+
+    </script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03数组中间位置添加和删除元素</title>
+    <script>
+
+        var nums = [1,2,3,7,8,9];
+        var newElements = [4,5,6];
+        nums.splice(3,0,newElements);
+        print(nums); // 1,2,3,4,5,6,7,8,9
+
+        var nums = [1,2,3,100,200,300,400,4,5];
+        nums.splice(3,4);
+        print(nums); // 1,2,3,4,5
+
+    </script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02查找元素</title>
+    <script>
+
+        //1,如果目标数组包含该参数，就返回该元素在数组中的索引；如果不包含，就返回 -1
+        var names = ["David", "Cynthia", "Raymond", "Clayton", "Jennifer"];
+
+        var position = names.indexOf('Cynthia');
+
+        //2,返回相同元素中最后一个元 素的索引，如果没找到相同元素，则返回 -1
+        var names = ["David", "Mike", "Cynthia", "Raymond", "Clayton", "Mike", "Jennifer"];
+
+        var name = "Mike";
+
+        var lastPos = names.lastIndexOf(name);
+
+    </script>
+<body>
+
+</body>
+</html>
