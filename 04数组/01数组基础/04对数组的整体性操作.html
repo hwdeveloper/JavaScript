@@ -20,8 +20,12 @@
         }
 
         var samenums = [];
-        copy(nums, samenums);
-        nums[0] = 400;
+
+        var length =nums.length;
+        for(var i=0;i<length;i++){
+            samenums[i]=nums[i]
+        }
+        nums[0] = 55;
         console.log(samenums[0]); // 显示 1
 
     </script>
