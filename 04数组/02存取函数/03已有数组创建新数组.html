@@ -8,17 +8,17 @@
         //1,合并多个数组 创建一个新数组
         var cisDept = ["Mike", "Clayton", "Terrill", "Danny", "Jennifer"];
         var dmpDept = ["Raymond", "Cynthia", "Bryan"];
-        var itDiv = cis.concat(dmp);
-        print(itDiv);
-        itDiv = dmp.concat(cisDept);
-        print(itDiv);
+        var itDiv = cisDept.concat(dmpDept);
+        console.log(itDiv);
+        itDiv = dmpDept.concat(cisDept);
+        console.log(itDiv);
 
         //2,截取一个数组的子集创建一个新数组
         var itDiv = ["Mike","Clayton","Terrill","Raymond","Cynthia","Danny","Jennifer"];
         var dmpDept = itDiv.splice(3,3);
         var cisDept = itDiv;
-        print(dmpDept); // Raymond,Cynthia,Danny
-        print(cisDept); // Mike,Clayton,Terrill,Jennifer
+        console.log(dmpDept); // Raymond,Cynthia,Danny
+        console.log(cisDept); // Mike,Clayton,Terrill,Jennifer
 
     </script>
 <body>
