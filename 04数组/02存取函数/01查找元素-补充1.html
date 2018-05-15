@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>H5 新属性</title>
+    <script>
+
+        //1,创建一个数组
+        var names = ["David", "Cynthia", "Raymond", "Clayton", "Raymond", "Jennifer"];
+        //2,获得数组的长度
+        var length = names.length;
+        //3,设置查找的数据
+        var data = 'Clayton';
+        //4,设置获得数据的下标
+        var index = 0;
+        //5,遍历数组
+        for(var i=0;i<length;i++){
+            //6,如果从数组里面取出来的数据和data数据相等，就退出循环，并且记录数组的下标
+            if(names[i]==data){
+                index = i;
+                break;
+            }
+        }
+        console.log(index);
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>
