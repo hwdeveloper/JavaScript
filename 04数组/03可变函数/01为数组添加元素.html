@@ -5,22 +5,15 @@
     <title>01为数组添加元素</title>
     <script>
 
-        //1,将一个元素添加到数组末尾
+        //1,创建一个数组
         var nums = [1, 2, 3, 4, 5];
-        console.log(nums); // 1,2,3,4,5
-        nums.push(6);
-        console.log(nums); // 1,2,3,4,5,6
+        //2,为数组后面添加数据，并且返回数组的长度length
+        var length=nums.push(10);
+        console.log(nums);
 
-        //2,将元素添加在数组的开头
-        var nums = [2, 3, 4, 5];
-        console.log(nums); // 2,3,4,5
-        var newnum = 1;
-        nums.unshift(newnum);
-        console.log(nums); // 1,2,3,4,5
-
-        nums = [3, 4, 5];
-        nums.unshift(newnum, 1, 2);
-        console.log(nums); // 1,2,3,4,5
+        //3,为数组头部添加数据,并且返回数组的长度length
+        var length =nums.unshift(20);
+        console.log(nums);
 
     </script>
 <body>
