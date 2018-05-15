@@ -20,7 +20,10 @@
         }
 
         var samenums = [];
-        copy(nums, samenums);
+        var length =nums.length;
+        for(var i=0;i<length;i++){
+            samenums[i]=nums[i];
+        }
         nums[0] = 400;
         print(samenums[0]); // 显示 1
 
