@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01为数组添加元素</title>
+    <script>
+
+        //1,创建一个数组
+        var nums = [1, 2, 3, 4, 5];
+        function myPush(arrayData,data) {
+             //1,获得数组的长度
+            var length = arrayData.length;
+            //2,添加数据
+            arrayData[length]=data;
+            //3,返回数组
+            return arrayData;
+        }
+
+        var buffer = myPush(nums,10);
+        console.log(buffer.toString());
+
+
+    </script>
+<body>
+
+</body>
+</html>
