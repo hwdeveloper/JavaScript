@@ -7,7 +7,20 @@
     <script>
 
         //用代码实现lastIndexOf函数的功能
+        //1,创建一个数组
+        var names = ["David", "Cynthia", "Raymond", "Clayton", "Raymond", "Jennifer"];
+        //2,获得数组的长度
+        var lastIndex = names.length-1;
+        //3,设置查找的数据
+        var data = 'Clayton';
+        //4,进行遍历
+        for(var i=lastIndex;i>0;i--){
 
+            if(names[i]==data){
+                lastIndex = i;
+                break;
+            }
+        }
 
     </script>
 </head>

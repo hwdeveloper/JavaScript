@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>01查找元素-补充</title>
+    <script>
+
+        //用代码实现lastIndexOf函数的功能
+        //1,创建一个数组
+        var names = ["David", "Cynthia", "Raymond", "Clayton", "Raymond", "Jennifer"];
+        function myLastIndexOf(arrayData,data) {
+            //1,获得数组的长度
+            var length =arrayData.length;
+            //2,进行遍历
+            for(var i=length-1;i>0;i--){
+                //3,从后面依次判断当前的数据是否和数组里面的数据相等
+               if(arrayData[i]==data){
+                   //4,如果相等，就返回数组的下标，并且中断循环
+                   return i;
+               }
+            }
+            //5,如果没有找到数据，就返回-1
+            return -1;
+        }
+        var index=myLastIndexOf(names,'Clayton');
+        console.log(index);
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>
