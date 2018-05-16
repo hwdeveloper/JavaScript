@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03已有数组创建新数组</title>
+    <script>
+        //1,合并多个数组 创建一个新数组
+        var cisDept = ["Mike", "Clayton", "Terrill", "Danny", "Jennifer"];
+        var dmpDept = ["Raymond", "Cynthia", "Bryan"];
+        function myConcat(array1,array2) {
+            //1,获得数组的长度
+            var length1 = array1.length;//5
+            var length2 = array2.length;
+
+            //2,对第二个数组进行遍历
+            for(var i=0;i<length2;i++){
+                array1[length1+i]= array2[i];
+            }
+            return array1;
+        }
+        var array3 = myConcat(dmpDept,cisDept);
+        console.log(array3.toString())
+
+    </script>
+<body>
+
+</body>
+</html>
