@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03数组中间位置添加和删除元素</title>
+    <script>
+
+        var nums = [1,2,3,7,8,9];
+        var newElements = [4,5,6]; //3
+        //1,2,3,[],[],[],7,8,9   //start = 3
+
+        function mySplice(array1,array2,start) {
+            //1,获得两个数组的长度
+            var length1=array1.length;
+            var length2= array2.length;
+            //2,设置下标
+            var index = 0;
+            //3,把第一个数组的第start下标后面的数据依次往后面移动length2的长度
+            for(var i=start;i<start+length2;i++){
+                //4，假设i=3 把下标3的数据（7）移动到3+3=6的下标位置
+                array1[i+length2]= array1[i];
+                //5,i=3的下标位置就空出来了，就把第二个数组index=0的数据移动的下标为3的地方
+                array1[i]=array2[index];
+                //6,下标依次增加
+                index++;
+            }
+            console.log(array1.toString());
+        }
+
+        mySplice(nums,newElements,3);
+        
+
+    </script>
+<body>
+
+</body>
+</html>
