@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02从数组中删除元素</title>
+    <script>
+
+        //1,创建一个数组
+        var nums = [1, 2, 3, 4, 5];
+        //2,为数组删除尾部的数据
+       function myPop(nums) {
+           //1,获得数组的长度
+           var length = nums.length;
+           //2,把最后的数据给空
+           nums[length-1]=null;
+           //3,更改数组的长度
+           nums.length = nums.length-1;
+           console.log(nums.toString())
+       }
+
+        myPop(nums);
+
+
+    </script>
+<body>
+
+</body>
+</html>
