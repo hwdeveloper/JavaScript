@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03some</title>
+    <script>
+
+        var nums = [1,2,3,4,5,6,7,8,9,10];
+        function mySome(nums) {
+            //1,获得数组的长度
+            var length = nums.length;
+            //2,遍历
+            for(var i=0;i<length;i++){
+                //3,获得数据
+                var buffer=nums[i];
+                console.log(buffer);
+                //4,处理结果
+                var isTrue = buffer%2==0;
+                //5,有一个值为真就中断程序，并且返回true
+                if(isTrue){
+                    return true;
+                }
+            }
+        }
+        var isTrue = mySome(nums);
+        console.log(isTrue);
+    </script>
+<body>
+
+</body>
+</html>
