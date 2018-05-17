@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01call</title>
+    <script>
+
+        window.title = 'call学习';
+        document.title = 'call复习';
+
+        var js = {title: 'call' };
+        function changeTitle(){
+            console.log(this.title);
+        }
+
+        changeTitle.call();         //red (默认传递参数)
+        changeTitle.call(window);   //red
+        changeTitle.call(document); //yellow
+        changeTitle.call(this);     //red
+        changeTitle.call(js);       //blue
+    </script>
+<body>
+
+</body>
+</html>
