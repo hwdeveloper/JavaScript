@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02对象创建-01字面量</title>
+    <script>
+
+        function createPerson(name,age) {
+            var object = new Object();
+            object.name=name;
+            object.age=age;
+            object.say=function () {
+                console.log("hello world!");
+            }
+            return object;
+        }
+
+        var person1 = createPerson("小刚",18);
+        person1.say();
+
+
+    </script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04为数组排序（冒泡法）</title>
+    <script>
+        var nums = [3,1,2,100,4,200];
+        function mySort(nums) {
+            //1,获得数组的长度
+            var length = nums.length;
+            //2,选中每个数据
+            for(var i=0;i<length;i++){
+                //3,选中的每个数据和其他的每个数据进行比较
+                for(var j=i+1;j<length;j++){
+                    if(nums[i]>nums[j]){
+                        var buffer = nums[i];
+                        nums[i] = nums[j];
+                        nums[j] = buffer;
+                    }
+                }
+            }
+            console.log(nums.toString())
+        }
+        mySort(nums);
+
+    </script>
+<body>
+
+</body>
+</html>

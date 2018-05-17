@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03已有数组创建新数组</title>
+    <script>
+        //1,合并多个数组 创建一个新数组  2 ,3
+        var cisDept = ["Mike", "Clayton", "Terrill", "Danny", "Jennifer"];
+        function mySplice(arrayData,start,num) {
+            if(start<0||num<=0){
+                return null;
+            }
+            //1,获得数组的长度
+            var length =arrayData.length;
+            //2，判断开始的位置是否符合条件
+            if(start>=length||start+num>length){
+                return null;
+            }
+            //3,创建一个数组
+            var buffer =[];
+            var index=0;
+            //4,遍历数组
+            for(var i=start;i<start+num;i++){
+                buffer[index]=arrayData[i];
+                index++;
+            }
+            return buffer;
+        }
+
+        var buffer2 =mySplice(cisDept,2,3);
+        console.log(buffer2.toString());
+
+    </script>
+<body>
+
+</body>
+</html>

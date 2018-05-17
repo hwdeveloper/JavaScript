@@ -11,7 +11,7 @@
         }
         var samenums = nums;
         nums[0] = 400;
-        console.log(samenums[0]); // 显示 400
+        print(samenums[0]); // 显示 400
 
         //2,深复制
         var nums = [];
@@ -20,13 +20,12 @@
         }
 
         var samenums = [];
-
         var length =nums.length;
         for(var i=0;i<length;i++){
-            samenums[i]=nums[i]
+            samenums[i]=nums[i];
         }
-        nums[0] = 55;
-        console.log(samenums[0]); // 显示 1
+        nums[0] = 400;
+        print(samenums[0]); // 显示 1
 
     </script>
 <body>

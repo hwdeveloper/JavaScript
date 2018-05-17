@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04原型链</title>
+    <script>
+        function Person() {
+            this.getName=function () {
+                return this.name;
+            }
+        }
+        function Student(name) {
+            this.name=name;
+        }
+        Student.prototype=new Person();
+        var xiaoGane =new Student("小刚");
+        console.log(xiaoGane.getName())
+
+    </script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02对象创建-03构造器方式</title>
+    <script>
+
+        function Person(name,age) {
+            this.name= name;
+            this.age=age;
+            this.say=say;
+        }
+        
+        function say() {
+            console.log(this.name+"hello worlds");
+        }
+
+        var person1 = new Person("小刚",18);
+        var person2 = new Person("小",18);
+
+
+
+    </script>
+<body>
+
+</body>
+</html>

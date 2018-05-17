@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>05洗牌</title>
+    <script>
+        var cards = ["方块A","方块2","方块3","方块4","方块5","方块6","方块7","方块8","方块9","方块10","方块J","方块Q","方块K"];
+        var buffer=[];
+
+        while(cards.length>0){
+            //1,从cards里面随机抽出一张牌
+            //(1),获得cards长度以内随机的整数
+            var random=Math.floor(Math.random()*cards.length);
+            //2,通过random把cards的数据放置到buffer里面 buffer.pop(cards[random])
+            buffer.push(cards[random]);
+            //3,把cards中下标为random的数据去除掉
+            cards.splice(random,1);
+
+        }
+        console.log(buffer.toString());
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

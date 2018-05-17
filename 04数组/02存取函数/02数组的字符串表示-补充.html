@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02数组的字符串表示</title>
+    <script>
+        var names = ["David", "Cynthia", "Raymond", "Clayton", "Mike", "Jennifer"];
+
+        function myToString(arrayData) {
+            //1,获得数组的长度
+            var length = arrayData.length;
+            //2,创建一个缓存的字符串
+            var buffer='';
+            //3,遍历数据
+            for(var i=0;i<length;i++){
+                //4,如果是最后一次的时候，字符串后面不应该加上逗号，所以用i==length-1判断最后一次，进行特殊处理
+                if(i==length-1){
+                    buffer = buffer+ arrayData[i];
+                }else{
+                    buffer = buffer+ arrayData[i]+',';
+                }
+            }
+            return buffer;
+        }
+
+        var data = myToString(names);
+
+        console.log(data);
+    </script>
+<body>
+
+</body>
+</html>

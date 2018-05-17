@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>H5 新属性</title>
+    <script>
+
+        //1,创建一个数组
+        var names = ["David", "Cynthia", "Raymond", "Clayton", "Raymond", "Jennifer"];
+        //2,设置查找的数据
+        var data = 'Clayton';
+        function myIndexOf(arrayData,data) {
+            //1,获得数组的长度
+            var length = arrayData.length;
+            //2,遍历数组
+            for(var i=0;i<length;i++){
+                //3,如果从数组里面取出来的数据和data数据相等，就退出循环，并且记录数组的下标
+                if(arrayData[i]==data){
+                    return i;
+                }
+            }
+            return -1;
+        }
+       var index= myIndexOf(names,data);
+        console.log(index);
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

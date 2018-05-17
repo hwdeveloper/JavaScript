@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02every</title>
+    <script>
+        var nums = [2,4,6,8,10];
+        function myEvery(nums) {
+           //1,获得数组的长度
+            var length = nums.length;
+            //2,遍历数组
+            for(var i=0;i<length;i++){
+                //3,取出每个值
+                var buffer = nums[i];
+                //4,进行处理
+                var isTrue = buffer%2==0;//当前的值余2不等于0的时候就返回false
+                if(!isTrue){
+                   return false;
+                }
+            }
+            return true;
+        }
+       var isTrue= myEvery(nums);
+        console.log(isTrue);
+    </script>
+<body>
+
+</body>
+</html>
