@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <title>02apply</title>
     <script>
-        window.number = 'one';
-        document.number = 'two';
 
-        var s1 = {number: 'three' };
-        function changeColor(){
-            console.log(this.number);
+        window.title = 'apply学习';
+        document.title = 'apply复习';
+
+        var js = {title: 'apply' };
+        function changeTitle(){
+            console.log(this.title);
         }
 
-        changeColor.apply();         //one (默认传参)
-        changeColor.apply(window);   //one
-        changeColor.apply(document); //two
-        changeColor.apply(this);     //one
-        changeColor.apply(s1);       //three
+        changeTitle.apply();
+        changeTitle.apply(window);
+        changeTitle.apply(document);
+        changeTitle.apply(this);
+        changeTitle.apply(js);
 
     </script>
 <body>
