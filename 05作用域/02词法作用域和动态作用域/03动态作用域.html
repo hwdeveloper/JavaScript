@@ -7,10 +7,12 @@
     <script>
         var a = 2;
         function foo() {
+            console.log('找a第一步');
             console.log( a );
         }
         function bar() {
             var a = 3;
+            console.log('找a第二步');
             foo();
         }
         bar();
