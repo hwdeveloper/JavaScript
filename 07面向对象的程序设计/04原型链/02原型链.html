@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>02原型链</title>
+    <script>
+        function Animal() {
+            this.say=function (msg) {
+                console.log("说"+msg);
+            }
+        }
+        Dog.prototype=new Animal();
+        function Dog(name) {
+            this.name=name;
+            this.say=function (msg) {
+                console.log("大声说"+msg);
+            }
+        }
+
+        var dog = new Dog();
+
+        dog.say('哈哈');
+        
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

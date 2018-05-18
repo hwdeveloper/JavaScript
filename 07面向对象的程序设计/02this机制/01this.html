@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>01this机制</title>
+    <script>
+        var title="好标题";
+        window.title="太好了";
+        //document.title="谢谢";
+
+        window.say=function () {
+            console.log(this.title)
+        }
+        function getTitle() {
+            say();
+        }
+        function say() {
+            console.log(this.title)
+        }
+
+        //当前因为是window在调用getTitle，所以getTitle函数内部的this是window
+        getTitle();
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>
