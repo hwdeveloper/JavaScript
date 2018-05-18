@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01闭包第一种写法</title>
+    <script>
+          function Person() {
+          }
+          Person.prototype.type="人类";
+          Person.prototype.getType=function () {
+              return this.type;
+          }
+          var person = new Person();
+          console.log(person.getType());
+    </script>
+<body>
+
+</body>
+</html>
