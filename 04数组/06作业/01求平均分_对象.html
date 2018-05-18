@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>01求平均分_对象</title>
+    <script>
+        
+        function Student(name,score) {
+            this.name=name;
+            this.score=score;
+            //设置学生的分数
+            this.setScore=function (score) {
+                this.score=score;
+            }
+            //获得学生的分数
+            this.getScore=function () {
+                return this.score;
+            }
+        }
+        
+        function Excel() {
+            var total=0;
+            this.list=[];
+            this.addStu=function (stu) {
+                this.list.push(stu);
+            }
+            this.averageScore=function () {
+                //1,对数组进行遍历,stu是数组里面的每个值
+                this.list.forEach(function (stu) {
+                    //1,从学生对象里面取出分数
+                  var score=  stu.getScore();
+                  //2,每次遍历的时候就把分数累加，最终获得总分
+                    total  =total +score;
+                })
+                //3,总分除以长度等于平均分
+                this.average = total / this.list.length;
+                //4,返回平均分
+                return this.average;
+            }
+        }
+        //1,创建对象
+        var excel = new Excel();
+        var stu1 = new Student('小明',99);
+        var stu2 = new Student('小花',100);
+        var stu3 = new Student('小超',89);
+        var stu4 = new Student('小刚',91);
+
+        excel.addStu(stu1);
+        excel.addStu(stu2);
+        excel.addStu(stu3);
+        excel.addStu(stu4);
+
+        var average = excel.averageScore();
+        console.log(average);
+        
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>
