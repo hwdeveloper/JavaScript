@@ -4,14 +4,56 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>05作业.html</title>
-    //1,创建一个订单列表
-    //2,把订单列表里面付款的订单全部打印
+    <script>
+
+        //1,创建一个订单列表
+        //2,把订单列表里面付款的订单全部打印
 
 
-    //(1)创建一个产品的对象
-    //(2)把产品对象放到数组里面
-    //(3)根据付款的类型重写创建一个数组
-    //(4)遍历付款的订单列表
+        //(1)创建一个产品的对象
+        //(2)把产品对象放到数组里面
+        //(3)根据付款的类型重写创建一个数组
+        //(4)遍历付款的订单列表
+        
+        function Order(price,number,state) {
+            this.price=price;
+            this.number = number;
+            this.state = state;
+
+            this.getState=function () {
+                return this.state;
+            }
+        }
+        var order1 = new Order(9.9,10001,1);
+        var order2 = new Order(19.9,10002,1);
+        var order3 = new Order(0.9,10003,0);
+        var order4 = new Order(4.9,100041,1);
+        
+        function Admin() {
+            this.orderList=[];
+            this.addOrder=function (order) {
+                //每次添加的订单添加到数组的尾部
+                this.orderList.push(order)
+            }
+            this.print=function () {
+                var bufer= this.orderList.filter(function (order) {
+                    var state = order.getState();
+                    return state==1;
+                })
+                console.log(bufer.toString());
+            }
+        }
+        var admin = new Admin();
+        admin.addOrder(order1);
+        admin.addOrder(order2);
+        admin.addOrder(order3);
+        admin.addOrder(order4);
+
+        admin.print();
+
+
+    </script>
+
 
 </head>
 <body>
