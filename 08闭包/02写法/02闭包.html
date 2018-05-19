@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01闭包第一种写法</title>
+    <script>
+          function createPerson() {
+              var o = new Object();
+              o.type="人类";
+              o.getType=function () {
+                  return this.type;
+              }
+              return o;
+          }
+
+          var person = createPerson();
+          console.log(person.getType());
+    </script>
+<body>
+
+</body>
+</html>
