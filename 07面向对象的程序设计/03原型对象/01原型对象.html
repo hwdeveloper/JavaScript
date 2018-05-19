@@ -11,9 +11,13 @@
 
                       注意：原型对象默认只有属性：constructor。其他都是从Object继承而来，暂且不用考虑。
                   */
-        function Person () {
+        function Person (name) {
 
+            this.name=name;
         }
+
+        var person = new Person('小明');
+        console.log(person);
 
     </script>
 <body>
