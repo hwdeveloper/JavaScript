@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02读写数组</title>
+
+    <script>
+        var names = new Array();
+
+        for(var i=0;i<10;i++){
+            //写了数据
+            names[i]="数据"+i;
+        }
+        var index =0;
+        //设置数组的长度
+        var length = names.length;
+        while(index<length){
+            //读数据
+            var buffer = names[index];
+            console.log(buffer);
+            index++;
+        }
+
+
+    </script>
+<body>
+
+</body>
+</html>

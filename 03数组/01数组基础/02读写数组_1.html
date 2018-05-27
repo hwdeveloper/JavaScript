@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02读写数组</title>
+
+    <script>
+        var names = new Array();
+
+        for(var i=0;i<10;i++){
+            //写了数据
+            names[i]="数据"+i;
+        }
+
+        //设置i值
+        var i=names.length-1;
+        while(i >=0){
+            //读取数据
+            var infor = names[i];
+            console.log(infor);
+            i--;
+        }
+    </script>
+<body>
+
+</body>
+</html>
