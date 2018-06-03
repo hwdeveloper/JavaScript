@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02every</title>
+
+    <script src="js/Every.js"></script>
+    <script>
+        var nums = [2,4,6,8,9,10];
+
+       var isTrue= myEvery(nums,function (item) {
+           console.log(item);
+           var isTrue = item%2==0;//当前的值余2不等于0的时候就返回false
+        return isTrue;
+       });
+        console.log(isTrue);
+    </script>
+<body>
+
+</body>
+</html>
