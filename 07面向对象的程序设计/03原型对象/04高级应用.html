@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>数据结构</title>
+    <script>
+
+        var name="你好";
+
+        String.prototype.forEach=function (call) {
+            var length = this.length;
+            for(var i=0;i<length;i++){
+                call(this.charAt(i));
+            }
+        }
+
+        name.forEach(function (item) {
+            console.log(item);
+        })
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>
