@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03数组中间位置添加和删除元素</title>
+    <script>
+        var arrays = [1,2,3,100,200,300,400,4,5];
+
+        //1,开始的下标
+        var start=3;
+        //2,删除的数量
+        var num=4;
+        //3,获得数组的长度
+        var length = arrays.length;
+        //4,遍历数组
+        for(var i=start+num;i<length;i++){
+            //把当前下标的元素往前面移动num
+            arrays[i-num]=arrays[i]
+        }
+        arrays.length=arrays.length-num;
+
+        console.log(arrays);
+
+
+    </script>
+<body>
+
+</body>
+</html>

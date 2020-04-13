@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>02查找元素</title>
+    <script>
+        //(1),字面量方式
+        let array1 = ["小刚", "小明", "小花", "小强", "小王"];
+        let index = -1;
+        //(2)对数组元素进行遍历
+        for (let i = 0; i < array1.length; i++) {
+            //(3)对数组中每个数据进行判断
+            if (array1[i] == '小花') {
+                //(4)记录当前的index值
+                index = i;
+                break;
+            }
+        }
+        console.log(index);
+    </script>
+
+<body>
+
+</body>
+
+</html>

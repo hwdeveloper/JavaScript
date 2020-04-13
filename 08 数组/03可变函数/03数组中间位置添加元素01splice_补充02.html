@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03数组中间位置添加和删除元素</title>
+    <script>
+
+        var array1 = [1,2,3,7,8,9];
+        var array2 = [4,5,6];
+
+        console.log(splice(array1,array2,3));
+
+
+
+        function splice(array1,array2,index) {
+
+            //1，获得第一个数组的长度
+            var length1 = array1.length;
+            //2,获得第二个数组的长度
+            var length2=array2.length;
+            if(index<0)
+                index=0;
+
+            if(index>=length1)
+                index=length1;
+
+            for(var i=length1-1;i>=index;i--){
+                array1[i+length2]=array1[i]
+            }
+            //[1,2,3,7,8,9,7,8,9];
+            for(var j=index;j<index+length2;j++){
+                array1[j]=array2[j-index];
+            }
+
+           return array1;
+        }
+
+
+
+
+
+
+
+    </script>
+<body>
+
+</body>
+</html>

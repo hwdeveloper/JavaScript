@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>05洗牌</title>
+    <script>
+        var cards = ["方块A","方块2","方块3","方块4","方块5","方块6","方块7","方块8","方块9","方块10","方块J","方块Q","方块K"];
+        //1,准备一个牌盒
+        var buffer=[];
+        //2,如果牌盒里面有牌，就执行随机抽牌
+        while(cards.length>=1){
+            //2,从牌堆里面随机的抽一张牌,放置到新牌盒
+            var index=Math.floor(Math.random()*cards.length);
+            buffer.push(cards[index]);
+            //3,把老牌盒里面抽出的牌删除掉
+            cards.splice(index,1);
+        }
+        console.log(buffer);
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

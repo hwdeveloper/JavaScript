@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>02数组的字符串表示</title>
+    <script src="js/tools.js"></script>
+    <script>
+        Array.prototype.myJoin = function (word) {
+            if (word == null)
+                word = ',';
+            //2,创建一个缓存的字符串容器
+            let buffer = '';
+            //3,遍历数组 
+            let length = this.length;
+            for (let i = 0; i < length; i++) {
+                buffer = buffer + this[i] + word;
+            }
+            buffer = buffer.substring(0, buffer.length - 1);
+            return buffer;
+        }
+        //1,字面量的形式创建数组
+        let names = ["小刚", "小明", "小花", "小强", "小王"];
+
+
+
+        console.log(names.myJoin('@'));
+        console.log(names.myJoin());
+    </script>
+
+<body>
+
+</body>
+
+</html>

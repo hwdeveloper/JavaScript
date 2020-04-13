@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>检测属性</title>
+    <script>
+        function Person(name,age) {
+            this.name=name;
+            this.age=age;
+        }
+        //1, 创建对象
+        var person = new Person("小刚",18);
+        //2，设置性别
+        person.sex="男"
+        //4,删除年龄
+        delete person.age;
+        //5,检查属性,判断sex是否是person对象里面的属性
+        console.log('sex' in person);
+        console.log(person.hasOwnProperty('name'))
+
+    </script>
+<body>
+
+</body>
+</html>

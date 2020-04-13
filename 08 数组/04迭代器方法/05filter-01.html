@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06filter</title>
+    <script>
+
+        //结果均为 true 时，返回一个新数组
+
+        var nums = [1,2,3,4,5,6,7,8,9,10];
+
+        //当调用filter的时候，会对数组进行遍历，获得每个元素（num），如果返回的boolean值是真，那么会把当前的元素添加到新数组里面
+        var evens = nums.filter(function (num) {
+            return num % 2 == 0;
+        });
+
+        console.log(evens);
+
+
+
+    </script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>04 函数参数的解构赋值</title>
+
+    <script>
+        function add([x, y]) {
+            return x + y;
+        }
+
+        let array = [2, 3];
+        console.log(add(array)); // 3
+
+
+        function move({
+            x = 1,
+            y = 0
+        } = {}) {
+            return x + y;
+        }
+
+        console.log(move({
+            x: 3,
+            y: 8
+        })); //11
+
+        console.log(move()); //1
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

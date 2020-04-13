@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原型链</title>
+    <script>
+
+        function Life() {
+            this.getDNA=function () {
+                return "获得永生！"
+            }
+        }
+
+        Animal.prototype=new Life();
+        function Animal() {
+            
+        }
+
+        Person.prototype=new Animal();
+        function Person() {
+            
+        }
+
+        Student.prototype=new Person();
+        function Student() {
+            
+        }
+
+        var student= new Student();
+
+        console.log(student.getDNA());
+     
+
+
+    </script>
+<body>
+
+</body>
+</html>

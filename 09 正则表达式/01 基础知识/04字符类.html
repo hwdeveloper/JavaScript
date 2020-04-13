@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符类</title>
+    <script>
+
+        //1,数字，等同于[0-9]
+        var words = /\d/;
+       alert(words.test('152486'));
+
+        //2,非数字，等同于[^0-9]
+        var words = /\D/;
+        alert(words.test('我152486'));
+
+        //3,空白字符
+        var words = /\s/;
+        alert(words.test(' 我152486'));
+
+        //4,非空白字符
+        var words = /\S/;
+        alert(words.test('我152486'));
+
+        //5,字母、数字、下划线，等同于0-9A-Za-z_
+        var words = /\w/;
+        alert(words.test('a152Z86'));
+
+        //6,非字母、数字、下划线，等同于[^0-9A-Za-z_]
+        var words = /\W/;
+        alert(words.test('我'));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

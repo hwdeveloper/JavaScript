@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测试</title>
+
+    <script>
+        var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        function map(arrays, callback) {
+
+            //创建一个新数组
+            let buffer = [];
+            for (let i = 0; i < arrays.length; i++) {
+                //每次遍历的时候把arrays里面的每个值传到callback函数里面进行处理，
+                //处理完毕后，由callback函数返回处理后的值，由data1接收到数据
+                //把处理完的数据添加到新数组里面
+                let data1 = callback(arrays[i]);
+                buffer.push(data1);
+            }
+
+            return buffer;
+
+        }
+
+        let arrays = map(nums, function (number) {
+            let data = "超级赛亚人" + number;
+            return data;
+        });
+
+        console.log(arrays);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

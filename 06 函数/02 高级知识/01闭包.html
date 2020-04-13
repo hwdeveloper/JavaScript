@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包</title>
+    <script>
+        var name = '小刚';
+        function Person () {
+            var name = '小花';
+            function getName() {
+                return name;
+            }
+
+            return getName();
+        }
+        console.log(getName());
+
+    </script>
+<body>
+
+</body>
+</html>

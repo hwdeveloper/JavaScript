@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>05删除数组</title>
+    <script>
+        let names = ["David", "Mike", "Raymond", "Clayton", "Mike", "Jennifer", "Jennifer"];
+
+        function remove(array, data) {
+            //获得数组的长度
+            let length = array.length;
+            //遍历数组,找到数据所在的位置
+            let index = -1;
+            for (let i = 0; i < length; i++) {
+                if (array[i] == data) {
+                    //如果找到当前的数据，就停止，记录当前的下标
+                    index = i;
+                    //停止遍历
+                    break;
+                }
+            }
+            //删除当前的数据
+            for (let i = index; i < length; i++) {
+                //把数组里面的数组从后面往前面移动
+                array[i] = array[i + 1];
+            }
+            //把数组最后的数据清空
+            array[length - 1] = null;
+            //数组长度减少
+            array.length--;
+            return array;
+
+        }
+
+        console.log(remove(names, 'Mike'));
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

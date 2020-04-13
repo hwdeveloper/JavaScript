@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03数组中间位置添加和删除元素</title>
+    <script>
+
+        var array1 = [1,2,3,7,8,9];
+        var array2 = [4,5,6];
+
+        //1,设置添加数组的位置
+        var index=3;
+        //2,添加数组的长度
+        var length = array2.length;
+        //3,对第一个数组从后面进行遍历
+        for(var i=array1.length-1;i>=index;i--){
+            //4,元素往后面移动第二个数组的长度位置。（主要为第二个数组添加空间）
+            array1[i+length]=array1[i]
+        }
+        //[1,2,3,7,8,9,7,8,9];
+        //5，对第二个数组进行遍历
+        for(var j=index;j<index+length;j++){
+            //6,把第二个数组的元素添加到第一个数组位置
+            array1[j]=array2[j-index];
+        }
+
+        console.log(array1);
+
+
+
+
+
+
+    </script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>call</title>
+    <script>
+        window.getinfor=function() {
+            return "Windows"
+        }
+
+        var person ={};
+        person.getinfor=function() {
+            return "person"
+        }
+
+        function say(name,age){
+            console.log(this.getinfor());
+        }
+
+        say.call(window);
+        say.call(person)
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

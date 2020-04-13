@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的属性</title>
+    <script>
+
+        window.title = 'window学习';
+        var js = {title: 'js学习' };
+        document.title="document学习"
+        function say(){
+            console.log(this.title);
+        }
+
+
+        say.apply();
+        say.apply(js);
+        say.apply(document);
+
+
+
+    </script>
+<body>
+
+</body>
+</html>

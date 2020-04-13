@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>call</title>
+    <script>
+
+        window.title = 'window学习';
+        var js = {title: 'js学习' };
+        document.title="document学习"
+        
+        function say() {
+            console.log(this.title);
+        }
+
+        say();
+        say.call(js)
+        say.call(document)
+
+    </script>
+<body>
+
+</body>
+</html>

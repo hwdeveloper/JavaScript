@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>指定位置</title>
+    <script>
+
+        //匹配字符串的开头
+        alert(/^a/.test('acb'));//true
+        //匹配字符串的结尾
+        alert(/a$/.test('abb'));//true
+        //匹配单词的边界
+        alert(/\ba/.test('bbb'));//true
+        //匹配某个字符后面是否是某个字符
+        alert(/我是(?=中国人)/.test("我是中国人"));
+        //匹配某个字符后面不是否是某个字符
+        alert(/我是(?!中国人)/.test("我是中国人"));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

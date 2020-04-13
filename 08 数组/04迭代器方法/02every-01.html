@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02every</title>
+    <script>
+        var nums = [2,4,3,6,8,10];
+        //通过every进行遍历的时候，然后了一个false，那么循环就终止
+        nums.every(function (num) {
+            console.log(num);
+            return num % 2 == 0;
+        })
+
+    </script>
+<body>
+
+</body>
+</html>

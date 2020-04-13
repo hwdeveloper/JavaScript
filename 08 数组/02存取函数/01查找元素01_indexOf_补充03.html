@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>02查找元素</title>
+    <script src="js/tools.js"></script>
+    <script>
+        Array.prototype.myIndexOf = function (data) {
+            let index = -1;
+            //(2)对数组元素进行遍历
+            for (let i = 0; i < this.length; i++) {
+                //(3)对数组中每个数据进行判断
+                if (this[i] == data) {
+                    //(4)记录当前的index值
+                    return i;
+                }
+            }
+            return index;
+        }
+        //(1),字面量方式
+        let array1 = ["小刚", "小明", "小花", "小强", "小王"];
+        console.log(array1.myIndexOf('小王'));
+    </script>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>03由字符串生成数组</title>
+    <script>
+        var sentence = "the quick brown fox jumped over the lazy dog";
+        let array = [];
+
+        while (sentence.indexOf(' ') != -1) {
+            //找到o所在的下标
+            let index = sentence.indexOf(' ');
+            //取出o以前的字符串
+            let buffer = sentence.substring(0, index);
+            //把缓存的数据放到数组里面
+            array.push(buffer);
+            //把存进去的代码去掉
+            sentence = sentence.substring(index + 1, sentence.length);
+        }
+
+        array.push(sentence);
+
+        console.log(array);
+    </script>
+
+<body>
+
+</body>
+
+</html>

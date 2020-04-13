@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>直接量字符</title>
+    <script>
+        alert(/ ab/.test('ab')); //false
+        alert(/a b/.test('ab')); //false
+        var p = /at/;
+        console.log(p.test('ata'));//true
+
+        var p = /\+/;
+        console.log(p.test('4+5'));//true
+
+        var p = /\*/;
+        console.log(p.test('4*5'));//true
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

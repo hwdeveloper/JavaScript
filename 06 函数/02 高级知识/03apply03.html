@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的属性</title>
+    <script>
+
+        window.getinfor=function() {
+            return "Windows"
+        }
+
+        var person ={};
+        person.getinfor=function() {
+            return "person"
+        }
+
+        function say(name,age){
+            console.log(this.getinfor()+"里面的那个"+name+"才"+age+"哇？");
+        }
+
+        say.apply(window,["小刚",18]);
+        say.apply(person,["小刚",18])
+    </script>
+<body>
+
+</body>
+</html>

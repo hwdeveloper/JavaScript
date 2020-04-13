@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>05map</title>
+</head>
+
+<body>
+</body>
+<script>
+    var grades = [1, 2, 3, 4, 5];
+    //调用map时候，传入一个函数作为变量，这个函数的接收参数（grade）是数组遍历的每个元素，
+    // 可以对每个元素进行加工，然后把加工后的元素返回，那么就会得到一个新的数组（newgrades）
+    //新数组newgrades里面的每个元素就是之前加工后的元素
+    var newgrades = grades.map(function (grade) {
+        return "超级赛亚人" + grade + "号";
+    });
+    console.log(newgrades);
+</script>
+
+</html>

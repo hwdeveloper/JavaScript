@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原型初识</title>
+    <script>
+
+        function Person() {
+            
+        }
+
+        var person = new Person();
+
+        //Person构造函数的prototype指向了Person的原型对象object
+       console.log(Person.prototype);
+        //原型对象prototype里有一个constructor属性，该属性指向原型对象所属的构造函数Person；
+        console.log(Person.prototype.constructor);
+
+        //person实例对象的__proto__指向了person实例的原型对象object
+        console.log(person.__proto__);
+
+    </script>
+<body>
+
+</body>
+</html>

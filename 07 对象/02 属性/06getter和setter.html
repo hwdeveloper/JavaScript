@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getter和setter</title>
+    <script>
+
+        var  Person ={
+            name:'小刚',
+            get getName() {
+                return this.name;
+            },
+            set setName(name){
+                this.name=name;
+            }
+        }
+        Person.setName="小花";
+
+        console.log( Person.getName);
+
+
+
+    </script>
+<body>
+
+</body>
+</html>

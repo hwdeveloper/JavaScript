@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03some</title>
+    <script>
+        
+        Array.prototype.mySome=function (call) {
+            //1,获得数组的长度
+            var length = this.length;
+            //2,对数组进行遍历
+            for(var i=0;i<length;i++){
+                if(call(this[i]))
+                    return true;
+                // //3,获得每个元素
+                // var buffer =this[i];
+                // //4,把元素值传递给call函数
+                // var over=call(buffer);
+                // //5,如果返回的boolean值为真，就终止循环，并且返回真值
+                // if(over){
+                //     return true;
+                // }
+            }
+            return false;
+        }
+        var nums = [1,2,3,4,5,6,7,8,9,10];
+        var  someEven =nums.mySome(function (num) {
+            console.log(num);
+            return num % 2 == 0;
+        })
+        alert(someEven);
+
+
+        // var someEven = nums.some(function (num) {
+        //     console.log(num);
+        //     return num % 2 == 0;
+        // });
+
+    </script>
+<body>
+
+</body>
+</html>

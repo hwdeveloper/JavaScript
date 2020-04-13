@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>02 数组循环</title>
+    <script>
+        //1,key
+        let array1 = ["你", "是", "谁"];
+        for (index of array1.keys()) {
+            console.log(index);
+        }
+        //2,values
+        for (let value of array1.values()) {
+            console.log(value);
+        }
+        //3,entries 
+        for (let [key, value] of array1.entries()) {
+            console.log(key, value);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>02数组的字符串表示</title>
+    <script>
+        //1,字面量的形式创建数组
+        let array = ["小刚", "小明", "小花", "小强", "小王"];
+        //2,创建一个缓存的字符串容器
+        let data = '';
+        //3,遍历数组 
+        let length = array.length;
+        for (let i = 0; i < length; i++) {
+            data = data + array[i] + ",";
+        }
+        data = data.substring(0, data.length - 1);
+        console.log(data);
+    </script>
+
+<body>
+
+</body>
+
+</html>

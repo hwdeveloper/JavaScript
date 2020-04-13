@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>04为数组排序</title>
+    <script>
+        //1,顺序进行翻转
+        var nums = [1, 2, 3, 4, 5];
+        //2,Math.floor当前的数据向下取整
+        let length = Math.floor(nums.length / 2); //2
+        //遍历当前的数据  a^b =c     c^a =b
+        for (let i = 0; i < length; i++) {
+            //前后数据颠倒位置 
+            nums[i] = nums[i] ^ nums[nums.length - 1 - i];
+            nums[nums.length - 1 - i] = nums[i] ^ nums[nums.length - 1 - i];
+            nums[i] = nums[i] ^ nums[nums.length - 1 - i];
+        }
+
+        console.log(nums);
+    </script>
+
+<body>
+
+</body>
+
+</html>

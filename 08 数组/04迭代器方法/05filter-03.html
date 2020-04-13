@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>06filter</title>
+    <script>
+        Array.prototype.myFilter = function (callback) {
+            //创建一个新数组
+            let buffer = [];
+            for (let i = 0; i < this.length; i++) {
+                //let isFilter = callback(this[i]);
+                if (callback(this[i])) {
+                    buffer.push(this[i]);
+                }
+            }
+            return buffer;
+        }
+        var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let newArray = nums.myFilter(function (data) {
+
+            return data % 3 == 0;
+        });
+        console.log(newArray);
+    </script>
+
+<body>
+
+</body>
+
+</html>

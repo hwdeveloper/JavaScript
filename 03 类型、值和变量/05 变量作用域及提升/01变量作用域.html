@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量作用域</title>
+    <script>
+        //全局作用域
+        age=17;
+        function say() {
+            //局部作用域
+            var name="小刚";
+            var age=18;
+            alert(age);
+        }
+
+        say();
+        alert(name);
+        alert(age);
+    </script>
+<body>
+
+</body>
+</html>

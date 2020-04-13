@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06switch</title>
+    <script>
+
+        //1,设置index为1
+        var index =1;
+        //2,程序会进入case == index的区域
+        switch (index){
+            case 0:
+                alert(index);
+                break;
+            case 1:
+                //3，因为index == 1，符合条件就直接进入到这里
+                alert(index);
+                //4,执行完毕后，调用break 就跳出这个循环
+                break;
+            default:
+                alert("默认就执行这个哈！");
+        }
+    </script>
+<body>
+
+</body>
+</html>

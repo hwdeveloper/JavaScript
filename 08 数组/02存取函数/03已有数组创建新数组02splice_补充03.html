@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>03已有数组创建新数组</title>
+
+    <script>
+        Array.prototype.mySplice = function (start, end) {
+
+            //创建一个新的数组
+            let buffer = [];
+            //新数组的下标
+            let index = 0;
+            for (let i = start; i <= end; i++) {
+                buffer[index] = this[i];
+                index++;
+            }
+
+            //获得buffer数组的长度
+            let length = buffer.length;
+            for (let i = end + 1; i < this.length; i++) {
+                this[i - length] = this[i];
+            }
+
+            for (let i = this.length - length; i < this.length; i++) {
+                delete this[i];
+            }
+            this.length = this.length - length;
+            return buffer;
+        }
+        let names1 = ["小刚", "小明", "小花", "小强", "小王", "小李"];
+
+        console.log(names1.splice(1, 3));
+        console.log(names1);
+    </script>
+
+<body>
+
+</body>
+
+</html>

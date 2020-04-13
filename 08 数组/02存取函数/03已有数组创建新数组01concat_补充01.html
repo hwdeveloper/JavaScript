@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>03已有数组创建新数组</title>
+    <script>
+        //1,合并多个数组 创建一个新数组
+        let names1 = ["小刚", "小明", "小花", "小强", "小王"];
+        let names2 = ["小林", "小丽", "小杨"];
+        //把name2追加到name1后面
+        //遍历第二个数组
+        let length = names2.length;
+        for (let i = 0; i < length; i++) {
+            names1[names1.length] = names2[i];
+        }
+
+        console.log(names1);
+    </script>
+
+<body>
+
+</body>
+
+</html>

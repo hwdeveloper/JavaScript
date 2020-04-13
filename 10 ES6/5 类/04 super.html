@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>04 super</title>
+    <script>
+        class Person {
+            constructor(name, age) {
+                this.name = "原始" + name;
+                console.log(this.name);
+                this.age = age;
+            }
+
+            getName() {
+                console.log("******Person*******");
+                return this.name;
+            }
+        }
+
+        class Student extends Person {
+            constructor(name, age, number) {
+                super(name, age);
+                this.name = name;
+            }
+            getName() {
+                return super.getName();
+            }
+        }
+
+        let student = new Student('小刚', 18, 1);
+
+        console.log(student.getName());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的属性</title>
+    <script>
+
+        window.getinfor=function() {
+            return "Windows的方法"
+        }
+
+        var person ={};
+        person.getinfor=function() {
+            return "person的方法"
+        }
+
+        function say(){
+            console.log(this.getinfor());
+        }
+
+        say();
+        say.apply(person)
+    </script>
+<body>
+
+</body>
+</html>

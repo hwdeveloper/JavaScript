@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>04为数组排序</title>
+    <script>
+        //1,顺序进行翻转
+        var nums = [1, 2, 3, 4, 5];
+
+        //遍历当前的数据
+        for (let i = 0; i < nums.length / 2; i++) {
+            //前后数据颠倒位置
+            let buffer = nums[i];
+            nums[i] = nums[nums.length - 1 - i];
+            nums[nums.length - 1 - i] = buffer;
+        }
+    </script>
+
+<body>
+
+</body>
+
+</html>

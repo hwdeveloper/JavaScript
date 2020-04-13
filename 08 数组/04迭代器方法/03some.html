@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03some</title>
+    <script>
+
+        var nums = [1,2,3,4,5,6,7,8,9,10];
+        //当调用some的时候，num为数组nums返回的每个元素，如果函数some返回的boolean值是真，那么循环就终止
+        var someEven = nums.some(function (num) {
+            console.log(num);
+            return num % 2 == 0;
+        });
+        alert(someEven);
+
+    </script>
+<body>
+
+</body>
+</html>

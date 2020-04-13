@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>03已有数组创建新数组</title>
+    <script>
+        let names1 = ["小刚", "小明", "小花", "小强", "小王", "小李"];
+
+        let start = 1;
+        let end = 3;
+        //创建一个新的数组
+        let buffer = [];
+        //新数组的下标
+        let index = 0;
+        for (let i = start; i <= end; i++) {
+            buffer[index] = names1[i];
+            index++;
+        }
+        console.log(buffer);
+        console.log("***********");
+        //console.log(names1);
+        //获得buffer数组的长度
+        let length = buffer.length;
+        for (let i = end + 1; i < names1.length; i++) {
+            names1[i - length] = names1[i];
+        }
+
+
+        for (let i = names1.length - length; i < names1.length; i++) {
+            delete names1[i];
+        }
+        names1.length = names1.length - length;
+
+        console.log(names1);
+    </script>
+
+<body>
+
+</body>
+
+</html>

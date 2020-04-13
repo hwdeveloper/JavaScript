@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        function Perosn(name,age) {
+           this.name=name;
+           this.age=age;
+           this.sex=15;
+        }
+        var person = new Perosn("小花",17,11);
+//'小刚'
+    //1,获得json字符串
+    var data = "{name:'小刚',age:18,sex:0}";
+    //2,去掉外面的{}
+    var buffer = data.substring(1,data.length-1);
+    //取值
+    while(buffer.indexOf(':')!=-1){
+        //(1)获得:出现的第一次位置
+      var index=buffer.indexOf(':');
+      //(2)获得,出现的第一次位置
+      var endindex= buffer.indexOf(',');
+      //(3)获得key值
+      var key= buffer.substring(0,index);
+      //(4)获得值
+        if(endindex==-1){
+            var value=buffer.substr(index+1);
+        }else{
+            var value=buffer.substring(index+1,endindex);
+        }
+
+      //(5)去掉可能出现的逗号
+      //   value.replace('\'','+')
+      if(key in person){
+          console.log(key+":"+value)
+          person[key]= value;
+      }
+
+
+      if(endindex==-1){
+          buffer='';
+      }else{
+          buffer=buffer.substr(endindex+1);
+      }
+
+
+    }
+
+    console.log(person);
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
